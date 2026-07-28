@@ -11,7 +11,7 @@ const matches=[
     id: 2,
     teamA:'Team A',
     teamB:'Team B',
-    winner:'Team A'
+    winner:'Team B'
   },
   {
     id: 3,
@@ -27,9 +27,9 @@ function CricketMatch() { return (
 {matches.map((match)=>
 
 (<li key= {match.id}>
-<span></span>
+<span style ={{fontWeight:match.winner===match.teamA ? 'bold':'normal'}}>{match.teamA}</span>
 {'vs'}
-<span></span>
+<span style ={{fontWeight:match.winner===match.teamB ? 'bold':'normal'}}>{match.teamB}</span>
 </li>)
 
 )}
